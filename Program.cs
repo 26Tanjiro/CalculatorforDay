@@ -7,44 +7,88 @@ namespace project_e
     {
         static void Main(string[] args)
         {
-            int num1, num2 , addday;
-            Console.Write(" Enter Number:");
-            num1 = Convert.ToInt32(Console.ReadLine());
+           
+            int day, day2 , addday;
+            // input user //
+            Console.Write(" Enter Number 1 to 7:");
+            day = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Number:");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter Number must <=7 :");
+            day2= Convert.ToInt32(Console.ReadLine());
 
-            addday = num1 + num2;
-            
-                switch (addday)
+            addday = day+ day2;
+
+            //processs
+            DayCalculation(day, addday);
+               
+        }
+        public static void DayCalculation(int day, int addday)
+        {
+             switch (addday)
                 {
                     case 1:
-                        Console.WriteLine("The day is Monday");
+                    //output
+                    Monday();
                         break;
                     case 2:
-                        Console.WriteLine("The day is Tuesday");
+                    Tuesday();
                         break;
                     case 3:
-                        Console.WriteLine("The day is Wednesday");
+                    Wednesday();
                         break;
                     case 4:
-                        Console.WriteLine("The day is Thursday");
+                    Thursday();
                         break;
                     case 5:
-                        Console.WriteLine("The day is Friday");
-                        break;
+                    Friday();
+                    break;
                     case 6:
-                        Console.WriteLine("The day is Saturday");
+                    Saturday();
                         break;
                     case 7:
-                        Console.WriteLine("The day is Sunday");
+                    Sunday();
                         break;
                     default:
                         Console.WriteLine("Invalid input");
                         break;
                 
-            }
+                }
+            
         }
+        public static void Monday()
+        {
+            Console.WriteLine("The day is Monday");
+        }
+        public static void Tuesday()
+        {
+            Console.WriteLine("The day is Tuesday");
+        }
+
+        public static void Wednesday()
+        {
+            Console.WriteLine("The day is Wednesday");
+        }
+
+        public static void Thursday()
+        {
+            Console.WriteLine("The day is Thursday");
+        }
+        public static void Friday()
+        {
+            Console.WriteLine("The day is Friday");
+        }
+
+        public static void Saturday()
+        {
+            Console.WriteLine("The day is Saturday");
+        }
+
+        public static void Sunday()
+        {
+            Console.WriteLine("The day is Sunday");
+        }
+
+
     }
 
 }
